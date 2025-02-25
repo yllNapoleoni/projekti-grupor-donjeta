@@ -11048,3 +11048,103 @@ p {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(30px); /* Starts slightly lower */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); /* Ends at normal position */
+  }
+}
+
+/* Apply the fade-in effect to elements with the fade-in class */
+.fade-in {
+  animation: fadeIn 1s ease-out; /* 1 second animation */
+  opacity: 0; /* Initially hidden */
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #f8f9fa; /* Light background to contrast with the main page */
+  padding: 60px 0; /* Adds space above and below the section */
+}
+
+.testimonials .section-heading {
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.testimonials .testimonial-item {
+  background-color: #fff; /* White background for each testimonial */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow to give depth */
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition for shadow */
+  opacity: 0; /* Initially hidden for fade-in effect */
+  animation: fadeIn 1s ease-out forwards; /* Fade in animation */
+  animation-delay: 0.5s; /* Delay animation slightly for each testimonial */
+}
+
+.testimonials .testimonial-item:hover {
+  transform: translateY(-10px) scale(1.05); /* Move up and slightly scale the item (pop-up effect) */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Increase the shadow for more depth */
+}
+
+.testimonials .testimonial {
+  font-style: italic; /* Make testimonial text italic */
+  color: #555; /* Slightly lighter text color */
+  margin-bottom: 20px;
+}
+
+.testimonials .testimonial footer {
+  font-weight: bold;
+  color: #6c757d; /* Subtle text color for the person's name */
+  font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  .testimonials .testimonial-item {
+      margin-bottom: 20px; /* Add space between items on smaller screens */
+  }
+}
+
+
+/* Footer Section */
+.footer {
+  background-color: #343a40; /* Dark background for the footer */
+  color: #ffffff; /* White text */
+}
+
+.footer a {
+  text-decoration: none; /* Remove underline from links */
+  color: #ffffff; /* White links */
+  transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+}
+
+.footer a:hover {
+  color: #007bff; /* Change link color to blue on hover */
+}
+
+/* Social Media Icons */
+.footer i {
+  font-size: 1.5rem; /* Increase icon size */
+  transition: transform 0.3s ease-in-out; /* Smooth transform on hover */
+}
+
+.footer i:hover {
+  transform: scale(1.2); /* Slightly enlarge icon on hover */
+}
+
+/* Padding adjustments */
+.footer .row {
+  padding-bottom: 20px; /* Space at the bottom */
+}
